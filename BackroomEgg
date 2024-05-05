@@ -1,0 +1,116 @@
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+
+-- Notification
+OrionLib:MakeNotification({
+    Name = "LiquidX Hub💧",
+    Content = "LiquidX Hub💧",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+-- Main Window
+local Window = OrionLib:MakeWindow({
+    Name = "LiquidX Hub💧 BACKROOMS👻",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "Orion"
+})
+
+-- Information Tab
+local InformationTab = Window:MakeTab({
+    Name = "Information",
+    Icon = "rbxassetid://16468487927",
+    PremiumOnly = false
+})
+
+local InformationSection = InformationTab:AddSection({
+    Name = "Script Information ❓"
+})
+
+InformationTab:AddParagraph("Some Exploits Still In Testing! 🛠️", "Some Of The Exploits Contained In This Script Hub Are Still In The Testing Phase, Some Features May Not Work As Intended!")
+InformationTab:AddLabel("Script Hub Made By LiquidX Team!💧")
+
+local message = require(game.ReplicatedStorage.Library.Client.Message)
+
+InformationTab:AddButton({
+    Name = "Copy Discord Invite",
+    Callback = function()
+        setclipboard("https://discord.gg/TZwhqbxFQB")
+        message.Error("Discord Invite Link Copied!")
+    end
+})
+
+-- Settings Tab
+local SettingsTab = Window:MakeTab({
+    Name = "Backrooms Egg",
+    Icon = "rbxassetid://15172353804",
+    PremiumOnly = false
+})
+
+local SettingsSection = SettingsTab:AddSection({
+    Name = "Auto Find 100X Egg Luck Settings ⚙️"
+})
+
+SettingsTab:AddToggle({
+    Name = "Toggle Find 100X Luck Egg!🍀",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            local message = require(game.ReplicatedStorage.Library.Client.Message)
+            message.Error("Scanning For 100X Luck Eggs!")
+            loadstring(game:HttpGet("https://pastebin.com/raw/LxXNA3Sm"))()
+        else
+            -- Add code here if you want to do something when the toggle is turned off
+        end
+    end    
+})
+
+SettingsTab:AddParagraph("How To Use Find 100X Luck Egg 🍀", 'Go To World 1 Or 2 Spawn, then toggle on the "Find 100X Luck Egg!🍀". It Will Automatically Look For The 100X Luck Egg!')
+SettingsTab:AddParagraph("IMPORTANT!⚠️", 'Put Script Into AutoExec Folder If You Want It To Server Hop Every Hour!⌛')
+
+
+-- Misc Tab
+local MiscTab = Window:MakeTab({
+    Name = "Misc Scripts",
+    Icon = "rbxassetid://17109789793",
+    PremiumOnly = false
+})
+
+local MiscSection = MiscTab:AddSection({
+    Name = "Unlock FPS 🔓"
+})
+
+MiscSection:AddToggle({
+    Name = "Unlock Roblox FPS 🔓",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            local message = require(game.ReplicatedStorage.Library.Client.Message)
+            message.Error("Unlocked Roblox FPS!")
+        end
+    end
+})
+
+MiscSection:AddParagraph("How To Unlock Roblox FPS 🔓", "Toggle The Unlock Roblox FPS. After Done, It Will Unlock The Roblox Client FPS.")
+
+-- Script Hub Tab
+local ScriptHubTab = Window:MakeTab({
+    Name = "Script Hub",
+    Icon = "rbxassetid://14968191202",
+    PremiumOnly = false
+})
+
+local ScriptHubSection = ScriptHubTab:AddSection({
+    Name = "LiquidX Script Hub ⚙️"
+})
+
+ScriptHubSection:AddButton({
+    Name = "Open LiquidX Script Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Ps99LiquidX/LiquidXhub/main/LiquidXNEO"))()
+    end    
+})
+
+ScriptHubSection:AddParagraph("Open Script Hub", "Click the button to open the original LiquidX Hub Script Hub!💧")
+
+OrionLib:Init() -- UI Lib End
