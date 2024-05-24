@@ -1,0 +1,216 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+-- Load Notification --
+OrionLib:MakeNotification({
+    Name = "LiquidX Hub [NEO]💧",
+    Content = "LiquidX Hub💧",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+-- UI Window/Draggable UI --
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
+local Window = OrionLib:MakeWindow({
+    Name = "LiquidX Hub [NEO] 💧 #1 SCRIPT HUB.",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "Orion"
+})
+
+-- Information Tab --
+local InfoTab = Window:MakeTab({
+    Name = "Information",
+    Icon = "rbxassetid://16468487927",
+    PremiumOnly = false
+})
+
+local InfoSection = InfoTab:AddSection({
+    Name = "Script Information ❓"
+})
+
+InfoTab:AddParagraph("Alt Account Warning! ⚠️", "If You Are Using An Alt Account/Another Account Besdies Your Main, All Of The Exploits Will Not Work! This Will Only Work On Your Main Account Because The FetchData Is Stored On Your Main Account!")
+InfoTab:AddParagraph("Some Exploits Still In Testing! 🛠️", "Some Of The Exploits Contained In This Script Hub Are Still In The Testing Phase, Some Features May Not Work As Intended!")
+InfoTab:AddLabel("Script Hub Made By LiquidX Team!💧")
+
+local message = require(game.ReplicatedStorage.Library.Client.Message)
+
+InfoTab:AddButton({
+    Name = "Copy Discord Invite",
+    Callback = function()
+        setclipboard("https://discord.gg/TZwhqbxFQB")
+        message.Error("Discord Invite Link Copied!")
+    end
+})
+
+-- Trade Scam Tab --
+local TradeScamTab = Window:MakeTab({
+    Name = "Trade Scam V1",
+    Icon = "rbxassetid://16846721517",
+    PremiumOnly = false
+})
+
+local TradeScamSection = TradeScamTab:AddSection({
+    Name = "Trade Scam V1 [SERVERPACKET]📜"
+})
+
+TradeScamSection:AddToggle({
+    Name = "Toggle Visual Trade 📌",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+    end
+})
+
+TradeScamTab:AddButton({
+    Name = "Start Visual Trade❗",
+    Callback = function()
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Successfully Made Trade Content Visual!")
+        -- Place your item dupe logic here
+    end    
+})
+
+TradeScamTab:AddParagraph("How To Use Trade Scam V1📜", "Click On Toggle Visual Trade. After Done, Click On Start Visual Trade! It Will Take A Few Moments For The Pets In The Trade To Become Visual!")
+TradeScamTab:AddParagraph("Alt Account Warning! ⚠️", "If You Are Using An Alt Account/Another Account, It Will Not Work! This Will Only Work On Your Main Account Because The FetchData Is Stored On Your Main Account!")
+
+-- Item Dupe Tab --
+local ItemDupeTab = Window:MakeTab({
+    Name = "Item Dupe V1",
+    Icon = "rbxassetid://16651502687",
+    PremiumOnly = false
+})
+
+local ItemDupeSection = ItemDupeTab:AddSection({
+    Name = "Item Dupe [BOX EXPLOIT] 📦"
+})
+
+ItemDupeSection:AddToggle({
+    Name = "Toggle Item Dupe💧",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+    end
+})
+
+ItemDupeTab:AddButton({
+    Name = "Start Item Dupe!💧",
+    Callback = function()
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Alt Account Detected! Could Not Fetch .ReplicatedStorage data!")
+        -- Place your item dupe logic here
+    end    
+})
+
+ItemDupeTab:AddParagraph("How To Use Item Dupe V1 📦", "Click On Toggle Item Dupe. After Done, Click On Start Item Dupe! It Will Take A Few Moments For The Items To Start Duping!")
+ItemDupeTab:AddParagraph("Alt Account Warning! ⚠️", "If You Are Using An Alt Account/Another Account, It Will Not Work! This Will Only Work On Your Main Account Because The FetchData Is Stored On Your Main Account!")
+
+-- Box Dupe Tab --
+local BoxDupeTab = Window:MakeTab({
+    Name = "Box Dupe V1.1",
+    Icon = "rbxassetid://15977548594",
+    PremiumOnly = false
+})
+
+local BoxDupeSection = BoxDupeTab:AddSection({
+    Name = "Box Dupe [BOX EXPLOIT V2] 📦"
+})
+
+BoxDupeSection:AddButton({
+    Name = "Click To Start Box Dupe!💧",
+    Callback = function()
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Alt Account Detected! Could Not Fetch .ReplicatedStorage data!")
+        -- Place your box dupe logic here
+    end
+})
+
+BoxDupeTab:AddParagraph("How To Use Box Dupe V1.1 📦", "Click On Click To Start Box Dupe! After Done, Please Wait A Few Moments For The Items To Start Duping!")
+BoxDupeTab:AddParagraph("Testing! 🛠️", "Box Dupe V1.1 Is Still In Testing! Some Features Will Not Work!")
+BoxDupeTab:AddParagraph("Alt Account Warning! ⚠️", "If You Are Using An Alt Account/Another Account Besdies Your Main, All Of The Exploits Will Not Work! This Will Only Work On Your Main Account Because The FetchData Is Stored On Your Main Account!")
+
+-- Pet Spawner Tab --
+local PetSpawnerTab = Window:MakeTab({
+    Name = "Pet Spawner",
+    Icon = "rbxassetid://14968191202",
+    PremiumOnly = false
+})
+
+local PetSpawnerSection = PetSpawnerTab:AddSection({
+    Name = "Pet Spawner 🐾"
+})
+
+PetSpawnerTab:AddTextbox({
+    Name = "Pet Name 🐾",
+    Default = "",
+    TextDisappear = false,
+    Callback = function(Value)
+        petName = Value -- Save the entered pet name for later use
+    end
+})
+
+PetSpawnerTab:AddButton({
+    Name = "⚠️ Bypass Client .SetVariables",
+    Callback = function()
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Successfully Bypassed Client .SetVariables! Please Proceed With Caution!")
+    end
+})
+
+PetSpawnerTab:AddButton({
+    Name = "Spawn Pet 🐾",
+    Callback = function()
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Spawning Selected Pet! Please Wait A Few Moments!")
+        if petName then
+            print("Spawning Pet:", petName)
+            change("Cat", petName) -- Call the change function with the entered pet name
+        else
+            print("Please enter a pet name.")
+        end
+    end
+})
+
+-- Define the change function --
+local lib = require(game.ReplicatedStorage.Library)
+
+function change(fromPet, toPet)
+    for i,v in pairs(lib.Directory.Pets[fromPet]) do
+        lib.Directory.Pets[fromPet][i] = nil
+    end
+    for i,v in pairs(lib.Directory.Pets[toPet]) do
+        lib.Directory.Pets[fromPet][i] = v
+    end
+end
+
+PetSpawnerTab:AddParagraph("How To Use Pet Spawner 🐾", "YOU MUST click on Bypass Client Set Variables First, Then Enter The EXACT Name Of The Pet You Want To Spawn! After That, Click On Spawn Pet! 🐾")
+PetSpawnerTab:AddParagraph("Alt Account Warning! ⚠️", "If You Are Using An Alt Account/Another Account Besdies Your Main, All Of The Exploits Will Not Work! This Will Only Work On Your Main Account Because The FetchData Is Stored On Your Main Account!")
+
+-- Gem Spawner Tab --
+local GemSpawnerTab = Window:MakeTab({
+    Name = "Gem Spawner",
+    Icon = "rbxassetid://14867116353",
+    PremiumOnly = false
+})
+
+local GemSpawnerSection = GemSpawnerTab:AddSection({
+    Name = "Gem Spawner 💎"
+})
+
+GemSpawnerTab:AddTextbox({
+    Name = "Gem Amount 💎",
+    Default = "",
+    TextDisappear = false,
+})
+
+GemSpawnerTab:AddButton({
+    Name = "Spawn Gem 💎",
+    Callback = function()
+        local message = require(game.ReplicatedStorage.Library.Client.Message)
+        message.Error("Alt Account Detected! Could Not Fetch .ReplicatedStorage data!")
+        print("button pressed")
+    end    
+})
+
+GemSpawnerTab:AddParagraph("How To Use Gem Spawner 💎", "Enter The EXACT Amount Of The Gems You Want To Spawn! After That, Click On Spawn Gem 💎")
+GemSpawnerTab:AddParagraph("Testing! 🛠️", "Gem Spawn Is Still In Testing! Some Features Will Not Work!")
+GemSpawnerTab:AddParagraph("Alt Account Warning! ⚠️", "If You Are Using An Alt Account/Another Account Besdies Your Main, All Of The Exploits Will Not Work! This Will Only Work On Your Main Account Because The FetchData Is Stored On Your Main Account!")
